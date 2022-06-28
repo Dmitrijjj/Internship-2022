@@ -72,7 +72,7 @@ class Handler extends ExceptionHandler
         return $this->customApiResponse($exception);
     }
 
-    private function customApiResponse(Throwable $exception)
+    private function customApiResponse($exception)
     {
         if (method_exists($exception, 'getStatusCode')) {
             $statusCode = $exception->getStatusCode();
